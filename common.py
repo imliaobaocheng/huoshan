@@ -20,7 +20,8 @@ header = {
 # 获取Token       有效期60分钟
 def getToken():
     #resp = requests.get(API + "/token/huoshan").json()
-    resp = requests.get(API + "/token/huoshan/version/2.7.0").json()
+    resp = requests.get(API + "/token/huoshan/version/4.8.5").json()
+    print(resp)
     token = resp['token']
     print("Token: " + token)
     return token
@@ -28,7 +29,8 @@ def getToken():
 # 获取新的设备信息  有效期60分钟永久
 def getDevice():
     #resp = requests.get(API + "/huoshan/device/new").json()
-    resp = requests.get(API + "/huoshan/device/new/version/2.7.0").json()
+    resp = requests.get(API + "/huoshan/device/new/version/4.8.5").json()
+    print(resp)
     device_info = resp['data']
     print("设备信息: " + str(device_info))
     return device_info
